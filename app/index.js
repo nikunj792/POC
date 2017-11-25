@@ -1,10 +1,11 @@
-    import React from 'react';
-	import ReactDOM from 'react-dom';
-	import Home from 'Home';
-	import NameForm from './component/sample.js';
-	import Example from './component/example.js';
-	import Simple from './component/simple.js';
-	import Main from './component/main.js';
-				
-	ReactDOM.render(<Home />,document.getElementById('mytask'));
+import React from 'react';
+import {render} from 'react-dom';
+import { Provider }from'react-redux';
+import App from './container/App.js';
+import store from './store.js';
+render(
+		<Provider store={store}>
+			<App />
+		</Provider>, document.getElementById('app')
+	);			
 	
